@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsg0rgufk4cbb"]
+
+[ext_resource type="Texture2D" uid="uid://dbs02hd25vv1d" path="res://Assets/Sprites/Objects/track_slot.png" id="1_2c7d5"]
+[ext_resource type="Script" path="res://Scenes/Test/track_slot.gd" id="1_8p2th"]
+
+[node name="track_slot" type="Control"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8p2th")
+
+[node name="Slot" type="TextureRect" parent="."]
+self_modulate = Color(0.239216, 0.239216, 0.239216, 1)
+layout_mode = 0
+texture = ExtResource("1_2c7d5")
+
+[connection signal="gui_input" from="Slot" to="." method="_on_slot_gui_input"]

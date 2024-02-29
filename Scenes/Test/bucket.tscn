@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cohoxey2wavtx"]
+
+[ext_resource type="Script" path="res://Scenes/Test/bucket.gd" id="1_frwyo"]
+[ext_resource type="Texture2D" uid="uid://dqd4f16ewki4t" path="res://Assets/Sprites/Objects/bucket.png" id="1_kxjnr"]
+
+[node name="Bucket" type="Node2D"]
+script = ExtResource("1_frwyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0.184314, 0.305882, 1)
+texture = ExtResource("1_kxjnr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]

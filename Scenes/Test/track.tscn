@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3mi3tkn0bpks"]
+
+[ext_resource type="Texture2D" uid="uid://bu78kaq82pmv8" path="res://Assets/Sprites/Objects/track_bar.png" id="1_q1r6x"]
+[ext_resource type="Script" path="res://Scenes/Test/track.gd" id="1_uc5td"]
+[ext_resource type="PackedScene" uid="uid://bsg0rgufk4cbb" path="res://Scenes/Test/track_slot.tscn" id="3_bp8gq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whekd"]
+texture = ExtResource("1_q1r6x")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="Track" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uc5td")
+
+[node name="TrackBar" type="Panel" parent="."]
+self_modulate = Color(0.239216, 0.239216, 0.239216, 1)
+layout_mode = 0
+offset_right = 700.0
+offset_bottom = 12.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_whekd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TrackBar"]
+custom_minimum_size = Vector2(-20, -20)
+layout_mode = 0
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 860.0
+offset_bottom = 26.0
+theme_override_constants/separation = 76
+
+[node name="track_slot" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot2" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot3" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot4" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot5" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot6" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
+
+[node name="track_slot7" parent="TrackBar/HBoxContainer" instance=ExtResource("3_bp8gq")]
+layout_mode = 2
